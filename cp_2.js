@@ -2,8 +2,7 @@ const api_Url ="https://www.course-api.com/javascript-store-products"
 function fetchProductsThen(){
     return fetch(api_Url)
     .then((res)=>res.json())
-    .then((data)=>{data.forEach(p =>{
-        console.log(p.fields.name);
+    .then((data)=>{data.forEach(p =>{console.log(p.fields.name);
     });
 return data;
 })
@@ -11,10 +10,12 @@ return data;
 
 })
 }
+// fetch data from json
 function getImageUrl (fields) {
     const img = fields.image[0];
     return img.thumbnails.small.url || img.url || '';
 }
+// 
 async function fetchProductsAsync() {
     try{const res= await fetch(api_Url)
         const data= await res.json()
@@ -25,7 +26,6 @@ async function fetchProductsAsync() {
         return null;
     }
 }
-
 
 function displayProducts(products) {
     const container = document.querySelector('#product-container');

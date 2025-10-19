@@ -11,7 +11,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    background-color: bisque;
+    background-color: rgb(99, 110, 132);
     color: var(--text-dark);
     line-height: 1.6;
     text-align: center;
