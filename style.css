@@ -99,6 +99,8 @@ box-shadow: 0 6px 15px ;}
     display: flex;
     align-items: center;
     text-align: center;
+     flex-direction: column;
+    justify-content: space-between;
   }
 
     .product-card img {
@@ -113,5 +115,4 @@ box-shadow: 0 6px 15px ;}
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 15px;
-  grid-row: auto;
 }
