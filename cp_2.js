@@ -1,5 +1,6 @@
+const api_Url ="https://www.course-api.com/javascript-store-products"
 function fetchProductsThen(){
-    return fetch('https://www.course-api.com/javascript-store-products')
+    return fetch(api_Url)
     .then((res)=>res.json())
     .then((data)=>{data.forEach(p =>{
         console.log(p.fields.name);
@@ -15,23 +16,23 @@ function getImageUrl (fields) {
     return img.thumbnails.small.url || img.url || '';
 }
 async function fetchProductsAsync() {
-    try{const res= await fetch('https://www.course-api.com/javascript-store-products')
+    try{const res= await fetch(api_Url)
         const data= await res.json()
         displayProducts(data)
         return data
     }catch (err){
         handleError(err)
-        return null
+        return null;
     }
 }
 
 
 function displayProducts(products) {
     const container = document.querySelector('#product-container');
-    const statusEl = document.querySelector('#status') 
+    const statusEl = document.querySelector('#status'); 
     container.innerHTML= "";
     products.slice(0,5).forEach((p)=>{const{name, price}=p.fields; 
-    
+
 const imageUrl = getImageUrl(p.fields);
 const card = document.createElement("div")
 card.className = "product-card";
