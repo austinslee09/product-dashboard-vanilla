@@ -14,6 +14,7 @@
     background-color: bisque;
     color: var(--text-dark);
     line-height: 1.6;
+    text-align: center;
   }
   
   header {
@@ -26,7 +27,7 @@
   header h1 {
     margin: 0;
     font-size: 2.5rem;
-    float:;
+    
   }
   
   header p {
@@ -70,13 +71,7 @@
     box-shadow: 0 0 10px;
   }
   /* hover effect */
-  footer {
-    background-color: var(---green);
-    color: var(--white);
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
+  
   
   .contact-info li {
     margin-bottom: 0.25rem;
@@ -87,30 +82,36 @@
     text-align: center;
     justify-content: center;
 }
-/* flex box created*/
-.box{
-width: 250px;
-height: 200px;
-}
-#box1{
-    background-color: tan;
-    padding: 1px;
-}
-#box2{
-background-color:tan;
-padding: 2px;
-}
-#box3{
-background-color: tan;
-padding: 2px;
-}
+
 .box:hover {
     color: var(--link-hover);
     text-decoration: underline;
   opacity: 10;
 box-shadow: 0 6px 15px ;}
-    /* hover effect */
-    ul{
-      list-style-type: circle;
-      list-style-position: inside;
+    #productContainer{
+      display: flex;
     }
+    .product-card {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+    .product-card img {
+    max-height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+.product-card:hover {
+  box-shadow: 0 0 10px;
+}
+#product-container.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  grid-row: auto;
+}

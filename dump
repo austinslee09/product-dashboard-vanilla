@@ -15,7 +15,8 @@ function getImageUrl (fields) {
     return img.thumbnails.small.url || img.url || '';
 }
 async function fetchProductsAsync() {
-    try{const res= await fetch('https://www.course-api.com/javascript-store-products')
+    try{
+        const res= await fetch('https://www.course-api.com/javascript-store-products')
         const data= await res.json()
         displayProducts(data)
         return data
@@ -31,7 +32,6 @@ function displayProducts(products) {
     const statusEl = document.querySelector('#status') 
     container.innerHTML= "";
     products.slice(0,5).forEach((p)=>{const{name, price}=p.fields; 
-    
 const imageUrl = getImageUrl(p.fields);
 const card = document.createElement("div")
 card.className = "product-card";
@@ -42,7 +42,7 @@ card.innerHTML=`
 `;
 container.appendChild(card);
 });
-statusEl.textContent = "Showing 5 products"
+statusEl.textContent = "Here is five our our wonderful products!"
 }
 
 function handleError(err) {
