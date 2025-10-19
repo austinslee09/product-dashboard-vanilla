@@ -4,6 +4,7 @@ function fetchProductsThen(){
     .then((res)=>res.json())
     .then((data)=>{data.forEach(p =>{console.log(p.fields.name);
     });
+    // use fetch them and log each name
 return data;
 })
 .catch((err)=>{console.error("fetch failed", err);
@@ -26,7 +27,7 @@ async function fetchProductsAsync() {
         return null;
     }
 }
-
+// used await/async and try/catch to get data
 function displayProducts(products) {
     const container = document.querySelector('#product-container');
     const statusEl = document.querySelector('#status'); 
@@ -43,12 +44,15 @@ card.innerHTML=`
 `;
 container.appendChild(card);
 });
+// // looping first 5 items by api
 statusEl.textContent = "Showing 5 products"
 }
 
 function handleError(err) {
     console.error('Error:', err);
 }
+// error message
 
 fetchProductsThen();
 fetchProductsAsync();
+// step7

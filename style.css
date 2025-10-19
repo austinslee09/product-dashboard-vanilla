@@ -110,7 +110,9 @@ box-shadow: 0 6px 15px ;}
 }
 .product-card:hover {
   box-shadow: 0 0 10px;
+  transition: width 1s;
 }
+/* hover effect */
 #product-container.grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
